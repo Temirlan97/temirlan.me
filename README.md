@@ -1,1 +1,1 @@
-# temirlan.me
+# http://temirlan.me
