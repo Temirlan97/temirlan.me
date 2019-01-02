@@ -20,6 +20,9 @@
   <link href="{{ url_for('static', filename='lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
   <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
   <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
+  
+  <!-- Library for flag icons -->
+  <link href="{{ url_for('static', filename='lib/flag-icon-css/css/flag-icon.css')}}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
@@ -232,7 +235,6 @@
     </div>
   </section>
 
-
   <!--/ Section Testimonials Start /-->
   <div id="work" class="testimonials paralax-mf bg-image" style="background-image: url({{ url_for('static', filename='img/overlay-bg.jpg')}})">
     <div class="overlay-mf"></div>
@@ -247,9 +249,12 @@
               </div>
               <div class="content-test">
                 <p class="description lead">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit.
+                  SOFTWARE ENGINEER INTERN <br />
+                  <i class="ion-ios-calendar"> September 2018 - present</i> 
                 </p>
+                <ul class="description" style="text-align:left;">
+                  <li>Full-stack developer in Biz-National team.</li>
+                </ul>
               </div>
             </div>
             <div class="testimonial-box">
@@ -259,9 +264,16 @@
               </div>
               <div class="content-test">
                 <p class="description lead">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit.
+                  SOFTWARE ENGINEER INTERN <br />
+                  <i class="ion-ios-calendar"> June 2017 - December 2017</i> 
                 </p>
+                <ul class="description" style="text-align:left;">
+                  <li>Implemented new features for the trading platform (JEE, EclipseRCP/OSGi).</li>
+                  <li>Developed web-crawlers to periodically gather various information for trading (MySQL,JDBC).</li>
+                  <li>Designed and implemented a Process Manager, responsible for maintaining all the other processes 
+                  running on the servers.</li>
+                  <li>Redesigned and improved the implementation of Communication Server.</li>
+                </ul>
               </div>
             </div>
             <div class="testimonial-box">
@@ -271,9 +283,20 @@
               </div>
               <div class="content-test">
                 <p class="description lead">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit.
+                  TEACHING ASSISTANT <br />
+                  <i class="ion-ios-calendar"> September 2016 - May 2018</i> 
                 </p>
+                <ul class="description" style="text-align:left;">
+                  <li>
+                    Teaching Assistant for the following courses:
+                    <ul>
+                      <li>Programming in C I / II</li>
+                      <li>Computability and Complexity</li>
+                      <li>Object Oriented Programming II</li>
+                    </ul>
+                  </li>
+                  <li>Responsible to help during programming labs, provide tutorials and grade homework & exams.</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -450,9 +473,71 @@
   </section>
   <!--/ Section Portfolio End /-->
 
+  <div class="section-counter paralax-mf bg-image" style="background-image: url({{ url_for('static', filename='img/languages.jpg')}})">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="country-box">
+            <div class="country-ico">
+              <span class="ico-circle"><i class="flag-icon flag-icon-gb"></i></span>
+            </div>
+            <div class="country-num">
+              <p class="country">English</p>
+              <span class="country-text">Fluent</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="country-box pt-4 pt-md-0">
+            <div class="country-ico">
+              <span class="ico-circle"><i class="flag-icon flag-icon-ru"></i></span>
+            </div>
+            <div class="country-num">
+              <p class="country">Russian</p>
+              <span class="country-text">Native</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="country-box pt-4 pt-md-0">
+            <div class="country-ico">
+              <span class="ico-circle"><i class="flag-icon flag-icon-kg"></i></span>
+            </div>
+            <div class="country-num">
+              <p class="country">Kyrgyz</p>
+              <span class="country-text">Native</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="country-box pt-4 pt-md-0">
+            <div class="country-ico">
+              <span class="ico-circle"><i class="flag-icon flag-icon-tr"></i></span>
+            </div>
+            <div class="country-num">
+              <p class="country">Turkish</p>
+              <span class="country-text">Fluent</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="country-box pt-4 pt-md-0">
+            <div class="country-ico">
+              <span class="ico-circle"><i class="flag-icon flag-icon-de"></i></span>
+            </div>
+            <div class="country-num">
+              <p class="country">German</p>
+              <span class="conut-text">Basic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!--/ Section Services Star /-->
-  <section id="service" class="services-mf route">
+  <!--/ Section Services Start /-->
+  <section id="service" class="services-mf sect-pt4 route">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -559,61 +644,8 @@
     </div>
   </section>
   <!--/ Section Services End /-->
-
-  <div class="section-counter paralax-mf bg-image" style="background-image: url({{ url_for('static', filename='img/counters-bg.jpg')}})">
-    <div class="overlay-mf"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">450</p>
-              <span class="counter-text">WORKS COMPLETED</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">15</p>
-              <span class="counter-text">YEARS OF EXPERIENCE</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ios-people"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">550</p>
-              <span class="counter-text">TOTAL CLIENTS</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3 col-lg-3">
-          <div class="counter-box pt-4 pt-md-0">
-            <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
-            </div>
-            <div class="counter-num">
-              <p class="counter">36</p>
-              <span class="counter-text">AWARDS WON</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!--/ Section Blog Star /-->
+  
+  <!--/ Section Blog Start /-->
   <section id="blog" class="blog-mf sect-pt4 route">
     <div class="container">
       <div class="row">
@@ -744,7 +776,7 @@
                     </h5>
                   </div>
                   <div>
-                      <form action="" method="post" role="form" class="contactForm">
+                      <form action="/message" method="post" role="form" class="contactForm">
                       <div id="sendmessage">Your message has been sent. Thank you!</div>
                       <div id="errormessage"></div>
                       <div class="row">
@@ -795,7 +827,7 @@
                     <ul class="list-ico">
                       <li><span class="ion-ios-location"></span> Martin-Luther-King-Platz 1, 20146 Hamburg</li>
                       <li><span class="ion-ios-telephone"></span> +49 (178) 3211783</li>
-                      <li><span class="ion-email"></span> ulugbekuulutemirlan@gmail.com</li>
+                      <li><span class="ion-email"></span> hi@temirlan.me</li>
                     </ul>
                   </div>
                   <div class="socials">

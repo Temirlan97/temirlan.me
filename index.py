@@ -8,11 +8,12 @@ app = Flask(__name__)
 @app.route('/')
 def index():
    return render_template('DevFolio/index.html')
-   
-@app.route('/.well-known/pki-validation/5ED2D1296FED2CC2A0EAEC6572EFA1A8.txt')
-def ssl():
-   return app.send_static_file('5ED2D1296FED2CC2A0EAEC6572EFA1A8.txt')
 
+@app.route('/message', methods=['POST'])
+def message():
+   return render_template('DevFolio/message.html')
 
 if __name__ == '__main__':
-   app.run(host='0.0.0.0', port='5000',debug = True)
+   # context = ('temirlan_me.crt', 'temirlan_me.key')
+   # app.run(host='0.0.0.0',port='5000',ssl_context=context,debug=True)
+   app.run(host='0.0.0.0',port='5000',debug=True)

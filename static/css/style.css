@@ -740,26 +740,26 @@ a:hover {
 }
 
 /*======================================
-//--//-->   COUNTER
+//--//-->   country
 ======================================*/
 
-.counter-box {
+.country-box {
   color: #fff;
   text-align: center;
 }
 
-.counter-ico {
+.country-ico {
   margin-bottom: 1rem;
 }
 
-.counter-ico .ico-circle {
+.country-ico .ico-circle {
   height: 60px;
   width: 60px;
   line-height: 1.8;
   box-shadow: 0 0 0 10px #cde1f8;
 }
 
-.counter-num .counter {
+.country-num .country {
   font-size: 2rem;
   margin-bottom: 0;
 }
@@ -1178,7 +1178,7 @@ footer .credits a {
 }
 
 @media (min-width: 577px) {
-  .counter-box {
+  .country-box {
     margin-bottom: 1.8rem;
   }
 }
