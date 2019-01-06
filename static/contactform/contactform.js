@@ -98,6 +98,7 @@ jQuery(document).ready(function($) {
       type: "POST",
       url: action,
       data: str,
+      mimetype: "application/json",
       success: function(msg) {
         // alert(msg);
         if (msg == 'OK') {
