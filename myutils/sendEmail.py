@@ -4,11 +4,6 @@ from email.mime.text import MIMEText
 from myutils import readKeyfile
 from myutils import log
 
-#################################
-# STORING PROCESSED TWEETS					
-#################################
- 
-
 def notifyViaEmail(whom, subject, body):
 	credentials = readKeyfile.readOutValues("mailconfigs.txt")
 	try:
