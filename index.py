@@ -5,6 +5,8 @@ from flask import request
 from flask import send_file
 from flask import send_from_directory
 from flask import url_for
+from myutils import log
+from myutils.sendEmail import notifyViaEmail
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,14 +15,20 @@ def index():
 
 @app.route('/message', methods=['POST'])
 def message():
-   name = request.values.get('name')
-   email = request.values.get('email')
-   subject = request.values.get('subject')
-   message = request.values.get('message')
-   # TODO send the message here
-   # return 'OK'
-   return "I'm sorry, this functionality doesn't work yet, but I'm on it. <br /> Feel free to send email manually using contact details on the right."
-
+   try:
+      name = request.values.get('name')
+      email = request.values.get('email')
+      subject = request.values.get('subject')
+      message = request.values.get('message')
+      body = "Sender: " + name + "\n\n"
+      body += "Sender's email: " + email + "\n\n"
+      body += "Subject: " + subject + "\n\n"
+      body += "Message:\n" + message + "\n\n"
+      notifyViaEmail("ulugbekuulutemirlan@gmail.com", "Letter from visitor(" + name + ") of temirlan.me", body)
+      return 'OK'
+   except Exception as e:
+      log.errorLog(e)
+      return "Ooooops, something went wrong. I will soon find out and hunt down the bug! <br /> Meanwhile feel free to send email manually using contact details on the right."
 
 @app.route('/bsc-thesis')
 def bsc_thesis():
